@@ -18,3 +18,8 @@ def shows(request):
 
 def news(request):
     return render(request, 'news.html')
+
+def recepies(request):
+    ingredient = ["poori","masala","pani"]
+    data = { 'name': 'panipoori','price': 50, 'ingredients': ingredient }
+    return render(request, 'recepies.html', data)

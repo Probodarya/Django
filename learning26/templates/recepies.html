@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>Recipes</h1>
+    <h2>Recipe Name: {{name }}</h2>
+    <h2>Recipe Price: {{price }}</h2>
+     <h2>INGREDIENT : {{ingredient}}</h2>
+    {% for item in ingredients %}
+        <h3>{{ item }}</h3>
+    {% endfor %}
+   
+
+   {% if price <= 50 %}
+    <h1>not costly</h1>
+    {% else %}
+        <h1>costly</h1>
+   {% endif %}
+
+</body>
+</html>
