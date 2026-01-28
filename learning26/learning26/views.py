@@ -23,3 +23,14 @@ def recepies(request):
     ingredient = ["poori","masala","pani"]
     data = { 'name': 'panipoori','price': 50, 'ingredients': ingredient }
     return render(request, 'recepies.html', data)
+
+def team(request):
+    players = ["virat kohli","rohit sharma","jasprit bumrah"]
+    data = { 'team_name':'gujrat titans','captain':'hardik pandya','trophy_count':'6','players': players }
+
+    return render(request, 'team.html', data)
+
+def student(request):
+    subject = ["C","C++","Java","Python"]
+    data = { 'student_name':'rahul','age':20,'subjects': subject }
+    return render(request, 'student.html', data)

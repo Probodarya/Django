@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <h2>Student Name: {{ student_name }}</h2>
+    <h2>Age: {{ age }}</h2>
+    <h2>Subjects:</h2>
+    {% for subject in subjects %}
+        <h3>{{ subject }}</h3>
+    {% endfor %}
+
+
+    {% if age < 20 %}
+        <h1>NOt collage Student</h1>
+    {% else %}
+        <h1>collage Student</h1>
+    {% endif %}
+
+
+</body>
+</html>
