@@ -1,0 +1,5 @@
+<h1> student grades page </h1>
+<ul>    
+    {% for subject, grade in student_grades.items %}
+        <li>{{ subject }}: {{  grade }}</li>
+    {% endfor %}
