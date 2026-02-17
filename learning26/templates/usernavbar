@@ -1,0 +1,10 @@
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Django</a>
+      </div>
+      <div class="nav-links">
+        <a href="{% url "profile" %}">profile</a>
+        <a href="{% url "grade" %}">gradest</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>

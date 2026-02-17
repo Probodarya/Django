@@ -1,5 +1,9 @@
+{% extends "base.html" %}
+{% block content %} 
+
 <h1> students name page </h1>
 <ul>
     {% for name in students_name %}
         <li>{{ name }}</li>
     {% endfor %}
+{% endblock content %}
