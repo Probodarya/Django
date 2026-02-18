@@ -1,9 +1,28 @@
 {% extends "base.html" %}
 {% block content %} 
 
-<h1> students name page </h1>
-<ul>
-    {% for name in students_name %}
-        <li>{{ name }}</li>
-    {% endfor %}
+<div class="course-container">
+    <div class="course-card">
+        <div class="course-info-header">
+            <h1 class="course-title">{{ course_name }}</h1>
+            <p class="student-count">{{ students_name|length }} Students Enrolled</p>
+        </div>
+
+        <div class="list-wrapper">
+            <ul class="student-list">
+                {% for name in students_name %}
+                    <li class="student-item">
+                        <div class="student-profile">
+                            <span class="avatar">{{ name|first }}</span>
+                            <span class="name">{{ name }}</span>
+                        </div>
+                        <span class="status-badge">Active</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
+  

@@ -1,5 +1,21 @@
-<h1> student courses page </h1>
-<ul>
-    {% for course in student_courses %}
-        <li>{{ course }}</li>
-    {% endfor %}
+{% extends "base.html" %}
+{% block content %} 
+
+<div class="courses-section">
+    <h1 class="page-title">My Enrolled Courses</h1>
+    
+    <div class="course-grid">
+        {% for course in student_courses %}
+            <div class="course-card">
+                <div class="course-header"></div>
+                <div class="course-body">
+                    <span class="course-tag">Course</span>
+                    <h3 class="course-name">{{ course }}</h3>
+               
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
